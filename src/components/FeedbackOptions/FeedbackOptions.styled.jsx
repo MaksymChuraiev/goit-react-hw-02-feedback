@@ -1,10 +1,23 @@
 import styled from '@emotion/styled';
 
 export const FeedbackOptionsList = styled.ul`
-  margin: 0 auto;
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
 `;
-export const FeedbackOptionsItem = styled.li``;
-export const FeedbackOptionsButton = styled.button``;
+export const FeedbackOptionsItem = styled.li`
+  :not(:last-child) {
+    margin-right: 10px;
+  }
+`;
+export const FeedbackOptionsButton = styled.button`
+  outline: none;
+  border-radius: 4px;
+  width: 70px;
+  height: 30px;
+  font-weight: 600;
+  cursor: pointer;
+`;

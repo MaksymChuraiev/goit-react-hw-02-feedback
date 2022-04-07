@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { StatisticSection, Title } from './Section.styled';
+import PropTypes from 'prop-types';
 
 export class Section extends Component {
   render() {
@@ -21,3 +22,8 @@ export class Section extends Component {
 //     </StatisticSection>
 //   );
 // };
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.arrayOf(PropTypes.element),
+};
