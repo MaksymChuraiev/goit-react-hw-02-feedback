@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 export class Section extends Component {
   render() {
     const { title, children } = this.props;
+
     return (
       <StatisticSection>
         <Title>{title}</Title>
@@ -25,5 +26,5 @@ export class Section extends Component {
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.arrayOf(PropTypes.element),
+  children: PropTypes.node.isRequired,
 };

@@ -1,7 +1,4 @@
-import { Notification } from 'components/Notification/Notification';
 import {
-  StatisticsInfo,
-  StatisticsTitle,
   StatisticsList,
   StatisticsItem,
   StatisticsInfoText,
@@ -16,30 +13,23 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return (
-    <StatisticsInfo>
-      <StatisticsTitle>Statistics</StatisticsTitle>
-      {total > 0 ? (
-        <StatisticsList>
-          <StatisticsItem>
-            <StatisticsInfoText>{`Good:${good}`}</StatisticsInfoText>
-          </StatisticsItem>
-          <StatisticsItem>
-            <StatisticsInfoText>{`Neutral:${neutral}`}</StatisticsInfoText>
-          </StatisticsItem>
-          <StatisticsItem>
-            <StatisticsInfoText>{`Bad:${bad}`}</StatisticsInfoText>
-          </StatisticsItem>
-          <StatisticsItem>
-            <StatisticsInfoText>{`Total:${total}`}</StatisticsInfoText>
-          </StatisticsItem>
-          <StatisticsItem>
-            <StatisticsInfoText>{`Positive feedback:${positivePercentage}%`}</StatisticsInfoText>
-          </StatisticsItem>
-        </StatisticsList>
-      ) : (
-        <Notification message="There is no feedback" />
-      )}
-    </StatisticsInfo>
+    <StatisticsList>
+      <StatisticsItem>
+        <StatisticsInfoText>{`Good:${good}`}</StatisticsInfoText>
+      </StatisticsItem>
+      <StatisticsItem>
+        <StatisticsInfoText>{`Neutral:${neutral}`}</StatisticsInfoText>
+      </StatisticsItem>
+      <StatisticsItem>
+        <StatisticsInfoText>{`Bad:${bad}`}</StatisticsInfoText>
+      </StatisticsItem>
+      <StatisticsItem>
+        <StatisticsInfoText>{`Total:${total}`}</StatisticsInfoText>
+      </StatisticsItem>
+      <StatisticsItem>
+        <StatisticsInfoText>{`Positive feedback:${positivePercentage}%`}</StatisticsInfoText>
+      </StatisticsItem>
+    </StatisticsList>
   );
 };
 
